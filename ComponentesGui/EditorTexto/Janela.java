@@ -56,7 +56,7 @@ public class Janela extends JFrame {
 	{
 		//configuraação da janela
 		setTitle("Bloco de notas");
-		setSize (400,300);
+		setSize (500,400);
 		setLocation(500,300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(true);

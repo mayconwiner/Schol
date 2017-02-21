@@ -3,6 +3,7 @@ package Views;
 
 //Pacotes da classe
 import java.awt.GridLayout;
+
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -10,6 +11,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+
+import Controllers.CadastroController;
 
 public class TelaCadastro extends JFrame
 {
@@ -21,6 +24,21 @@ public class TelaCadastro extends JFrame
 	private ButtonGroup agrupador = null;
 	private JButton vrBotaoOk=null, vrBotaoCancelar = null;
 	
+	
+	
+	public JButton getVrBotaoOk() {
+		return vrBotaoOk;
+	}
+
+
+	public JButton getVrBotaoCancelar() {
+		return vrBotaoCancelar;
+	}
+
+
+	private CadastroController controler = null;
+	
+	
 	//Construtor da classe
 	public TelaCadastro()
 	{
@@ -29,8 +47,7 @@ public class TelaCadastro extends JFrame
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setLayout(new GridLayout(5,2));	
 		
-		//Instancia e adiciona os componentes
-		//No layout
+		//Instancia e adiciona os componentes //No layout
 		add(new JLabel("Nome:"));
 		vrCampoNome = new JTextField(5);
 		add(vrCampoNome);
@@ -62,6 +79,15 @@ public class TelaCadastro extends JFrame
 		
 		add(vrBotaoOk);
 		add(vrBotaoCancelar);
+		
+		controler = new CadastroController(this);
+		vrBotaoOk.addActionListener(controler);
+		vrBotaoCancelar.addActionListener(controler);
+		
+		
+				
+		
+		
 	}
 }
 
