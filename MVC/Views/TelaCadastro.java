@@ -1,9 +1,8 @@
-//pacote da classe
+//Pacote da classe
 package Views;
 
-import java.awt.FlowLayout;
+//Pacotes da classe
 import java.awt.GridLayout;
-
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -12,49 +11,61 @@ import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
-public class TelaCadastro extends JFrame 
+public class TelaCadastro extends JFrame
 {
+	//Atributos da classe
 	private JTextField vrCampoNome = null;
 	private JTextField vrCampoEndereco = null;
 	private JComboBox<String> vrSelecaoIdade = null;
 	private JRadioButton vrMasc = null, vrFem = null;
 	private ButtonGroup agrupador = null;
-	private JButton vrBotaoOK = null, vrBotaoCancelar = null;
+	private JButton vrBotaoOk=null, vrBotaoCancelar = null;
 	
-	//Contrudor da classe
+	//Construtor da classe
 	public TelaCadastro()
 	{
-		setTitle("Cadastro de Cliente");
-		setSize(400,300);
+		setTitle("Cadastro de Clientes");
+		setSize(400,150);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setLayout(new GridLayout(5,2));
+		setLayout(new GridLayout(5,2));	
 		
-		//Intancia e adiciona os componentes no layout
-		add(new JLabel("nome"));
+		//Instancia e adiciona os componentes
+		//No layout
+		add(new JLabel("Nome:"));
 		vrCampoNome = new JTextField(5);
 		add(vrCampoNome);
 		
-		add(new JLabel("Endereço"));
-		vrCampoEndereco = new JTextField();
+		add(new JLabel("Endereco"));
+		vrCampoEndereco = new JTextField(5);
 		add(vrCampoEndereco);
-			
+		
 		add(new JLabel("Idade"));
 		vrSelecaoIdade = new JComboBox<String>();
-		for (int i =0;i<130; i++)
+		for (int i=0; i<130; i++)
 		{
-			vrSelecaoIdade.addItem(i+"");
+			vrSelecaoIdade.addItem(i + "");
 		}
+		add(vrSelecaoIdade);
+		
 		vrMasc = new JRadioButton("Masculino");
 		vrFem = new JRadioButton("Feminino");
 		agrupador = new ButtonGroup();
 		agrupador.add(vrMasc);
 		agrupador.add(vrFem);
-		add(vrMasc);
+		vrMasc.setSelected(true);
 		
-		vrBotaoOK = new JButton("Cadastrar");
+		add(vrMasc);
+		add(vrFem);
+		
+		vrBotaoOk = new JButton( "Cadastrar");
 		vrBotaoCancelar = new JButton("Cancelar");
-		add(vrBotaoOK);
+		
+		add(vrBotaoOk);
 		add(vrBotaoCancelar);
-	}	
-
+	}
 }
+
+
+
+
+

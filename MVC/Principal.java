@@ -1,8 +1,10 @@
 import Views.TelaPrincipal;
 
-public class Principal {
-public static void main (String[]Args)
+//Classe principal do projeto
+public class Principal 
 {
-	new TelaPrincipal();
-}
+	public static void main(String[] args)
+	{
+		new TelaPrincipal();
+	}
 }

@@ -1,4 +1,4 @@
-//pacote da classe
+//Pacote da classe
 package Models;
 
 public class Cliente 
@@ -8,5 +8,4 @@ public class Cliente
 	int idade;
 	String endereco;
 	char sexo;
-
 }

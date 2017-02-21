@@ -1,33 +1,33 @@
+//Pacote da classe
 package Controllers;
 
+//Pacotes utilizados
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import Views.TelaCadastro;
 import Views.TelaPrincipal;
 
-public class PrincipalController implements ActionListener 
+public class PrincipalController implements 
+ActionListener
 {
-public TelaPrincipal tela = null;
-public PrincipalController (TelaPrincipal copia)
-{
+	private TelaPrincipal tela = null;
 	
-	
-}
-	@Override
-	public void actionPerformed(ActionEvent e) 
+	//Construtor da classe controller
+	public PrincipalController(TelaPrincipal copia)
 	{
-	if (e.getSource() == tela.getSair())
-	{
-		System.exit(1);
+		tela = copia;
 	}
-	else 
-		if (e.getSource() == tela.getCadastrar())
+	
+	public void actionPerformed(ActionEvent e)
+	{
+		if (e.getSource() == tela.getSair())
 		{
-			new TelaCadastro();
+			System.exit(0);
 		}
-		
+		else if (e.getSource() == tela.getCadastrar())
+		{
+			new TelaCadastro().setVisible(true);
+		}
 	}
-	
-
 }

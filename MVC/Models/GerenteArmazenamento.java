@@ -4,34 +4,42 @@ import java.util.ArrayList;
 
 public class GerenteArmazenamento 
 {
-	//Vriar variavel de referecia
-	private static GerenteArmazenamento vrGerent = null;
+	//Cria variavel de referencia
+	private static GerenteArmazenamento vrGerente = null;
 	
-	//Contrudor provado do Singleton
+	//Construtor privado do Singleton
 	private GerenteArmazenamento()
-	{
-		//Contrutor vazio
-		
-	}
+	{/*construtor vazio eheheh*/}
 	
 	//Metodo responsavel pelo retorno do Singleton
-	static GerenteArmazenamento retornaGerente()
+	public static GerenteArmazenamento retornaGerente()
 	{
-		if (vrGerent == null)
+		if (vrGerente == null)
 		{
-			vrGerent = new GerenteArmazenamento();
+			vrGerente  = new GerenteArmazenamento();
 		}
-		return vrGerent;
-	}
-	//Metodo reponsavel pelo regitro de cliente
-	public static void gravaCliente(Cliente c)
-	{
 		
+		return vrGerente;
 	}
-	//Metodo retorna todos os cliente cadastrados
-	public static ArrayList<Cliente> buscaCliente()
+	
+	//Metodo responsavel pelo registro de cliente
+	public static void gravaCliente(Cliente c)
+	{	
+	}
+	
+	//Metodo que retorna todos os clientes 
+	//Cadastrados
+	public static ArrayList<Cliente> buscaClientes()
 	{
 		return null;
 	}
-
 }
+
+
+
+
+
+
+
+
+
