@@ -26,6 +26,31 @@ public class TelaCadastro extends JFrame
 	
 	
 	
+	public JComboBox<String> getVrSelecaoIdade() {
+		return vrSelecaoIdade;
+	}
+
+
+	public JRadioButton getVrMasc() {
+		return vrMasc;
+	}
+
+
+	public JRadioButton getVrFem() {
+		return vrFem;
+	}
+
+
+	public JTextField getVrCampoNome() {
+		return vrCampoNome;
+	}
+
+
+	public JTextField getVrCampoEndereco() {
+		return vrCampoEndereco;
+	}
+
+
 	public JButton getVrBotaoOk() {
 		return vrBotaoOk;
 	}

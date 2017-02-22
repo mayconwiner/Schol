@@ -29,5 +29,8 @@ ActionListener
 		{
 			new TelaCadastro().setVisible(true);
 		}
+		else if (e.getSource() == tela.getRelatorio()){
+			
+		}
 	}
 }

@@ -16,6 +16,7 @@ public class TelaPrincipal extends JFrame
 	//Atributos da classe
 	private JMenuBar barraMenu = null;
 	private JMenu  menu = null;
+	private JMenuItem relatorio = null;
 	private JMenuItem cadastrar = null;
 	private JMenuItem sair = null;
 	
@@ -25,6 +26,9 @@ public class TelaPrincipal extends JFrame
 	}
 	public JMenuItem getSair() {
 		return sair;
+	}
+	public JMenuItem getRelatorio(){
+		return relatorio;
 	}
 
 	private PrincipalController controller = null;
@@ -42,6 +46,7 @@ public class TelaPrincipal extends JFrame
 		barraMenu = new JMenuBar();
 		menu = new JMenu("Arquivo");
 		cadastrar = new JMenuItem("Cadastrar cliente");
+		relatorio = new JMenuItem("Relatorio");
 		sair = new JMenuItem("Sair");
 		
 		//Implementa hierarquia de menus
@@ -49,12 +54,16 @@ public class TelaPrincipal extends JFrame
 		barraMenu.add(menu);
 		menu.add(cadastrar);
 		menu.addSeparator();
+		menu.add(relatorio);
+		menu.addSeparator();
 		menu.add(sair);
 		
 		//Registra a janela ao tratador de eventos
 		controller = new PrincipalController(this);
 		cadastrar.addActionListener(controller);
+		relatorio.addActionListener(controller);
 		sair.addActionListener(controller);
+		
 		
 		//Manda mostrar a janela
 		setVisible(true);
